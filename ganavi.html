@@ -1,0 +1,119 @@
+{% comment %} code by ganavi,sahana {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .slider {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .slider img {
+            width: 100%;
+            height: 100vh;
+        }
+        .slider-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .slider-text h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .slider-buttons {
+            margin-top: 20px;
+        }
+        .slider-buttons a {
+            text-decoration: none;
+            color: #000;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+        .slider-buttons a:hover {
+            background-color: #ddd;
+        }
+        .contact-details {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>Cosmic Compass</div>
+        <nav class="nav-links">
+
+            <a href="#">About</a>
+            <a href="ganavi.html">Home</a>
+            <a href="constei.html">Compass</a>
+                <a href="stories.html">Stories</a>
+                <a href="">About Us</a>
+                <a href="lo.html">Login</a>
+                
+            <a href="#" id="contactBtn">Contact</a>
+        </nav>
+    </header>
+    <div class="slider">
+        <img src="https://img.pikbest.com/back_our/20210320/bg/2b78c6006f504.png!w700wp" alt="Earth from space">
+        <div class="slider-text">
+            <h1>Welcome to Our Site</h1>
+            
+            <div class="slider-buttons">
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-details" id="contactDetails">
+        <h2>Contact Us</h2>
+        <p>Email: contact@cosmiccompass.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Space Avenue, Galaxy Town, Universe</p>
+    </div>
+
+    <script>
+        document.getElementById('contactBtn').addEventListener('click', () => {
+            const contactDetails = document.getElementById('contactDetails');
+            if (contactDetails.style.display === 'none' || contactDetails.style.display === '') {
+                contactDetails.style.display = 'block';
+            } else {
+                contactDetails.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

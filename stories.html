@@ -1,0 +1,52 @@
+{% comment %} code by Nithya {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="storiescss.css">
+    <title>Story Gallery</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="ganavi.html">Home</a></li>
+                <li><a href="constei.html">Compass</a></li>
+                <li><a href="stories.html">Gallery</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="lo.html">Login</a></li>
+                
+                
+
+
+            </ul>
+        </nav>
+    </header>
+    <h1>Gallery</h1>
+
+    <div class="filter-container">
+        <div class="filter-buttons">
+            <button class="filter-btn" onclick="toggleFilter(this)">Constelletions</button>
+            <button class="filter-btn" onclick="toggleFilter(this)">Planets</button>
+            <button class="filter-btn" onclick="toggleFilter(this)">Meteor Shower</button>
+        </div>
+        <div class="submit-btn-container">
+            <button class="submit-btn" onclick="submitFilters()">Submit</button>
+        </div>
+    </div>
+
+    <div id="gallery" class="gallery-container">
+        <!-- Dynamic story cards will be generated here -->
+    </div>
+
+    <div id="display-story" class="full-page-modal">
+        <span class="close" onclick="closeStory()">&times;</span>
+        <h2 id="story-title"></h2>
+        <img id="story-image" src="" alt="Story Image" style="width:100%; border-radius: 10px;">
+        <p id="story-content"></p>
+    </div>
+
+    <script src="storiesjs.js"></script>
+</body>
+</html>
